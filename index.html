@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>The Official Website of Zack McKevitt</title>
+		<style>
+			td {
+				padding: 10px;
+			}
+		</style>
+	</head>
+	<body style="background-color: #d3d3d3;">
+		<h1 style="text-align: center;">Welcome to my webpage!</h1>
+		<table style="margin: 0px auto;">
+			<tr>
+				<td><a href="index.html" style="color: black;">Home</td>
+				<td><a href="aboutme.html" style="color:black;">About Me</td>
+				<td><a href="projects.html" style="color:black;">Projects</td>
+				<td><a href="tv.html" style="color:black;">Good TV</td>
+				<td><a href="music.html" style="color:black;">Good Music</td>
+			</tr>
+		</table>
+
+		<!-- <h3 style="text-align: center; padding-top: 50px;">Here is a cool thing I made</h3> -->
+		<!-- credit to http://slicker.me/fractals/fractals.htm-->
+
+		<div style="margin:0 auto;text-align:center">
+			<div style="margin-left:auto;margin-right:auto;text-align:center">
+				<canvas id="myCanvas" width="800" height="800"></canvas>
+			</div>
+		</div>
+        <script>
+				var creal = -.8
+				var cimag = .156;
+				var canvas = document.getElementById('myCanvas');
+				var context = canvas.getContext('2d');
+				var frame = 0; // new variable to track the current frame number
+
+				function julia() // the program drawing the fractal
+				{                // is now a function so that it can be called periodically
+				        for(y=0;y<200;y++)
+				                {
+				                for(x=0;x<200;x++)
+				                        {
+				                        var cx=-2+x/50;
+				                        var cy=-2+y/50;
+				                        var i = 0;
+
+				                        do
+				                                {
+				                                xt=cx*cx-cy*cy+creal;
+				                                cy=2*cx*cy+cimag;
+				                                cx=xt;
+				                                i++;
+				                                }
+				                        while ((cx*cx+cy*cy<4)&&i<25);
+
+				                        i=i.toString(16);
+				                        context.beginPath();
+				                        context.rect(x*4, y*4, 4, 4);
+				                        context.fillStyle ='#'+i+i+i;
+				                        context.fill();
+				                        }
+				                }
+				        frame++;        // increase the number of the frame
+				        creal=-.8+.6*Math.sin(frame/(3.14*20));    // calculate the new coordinates
+				        cimag=.156+.4*Math.cos(frame/(3.14*40));   // of the c point
+				}
+
+				a=setInterval(julia,100); //redraw the fractal every 100ms
+
+        </script>
+				<p style="text-align:center; text-size: 10px;">Credit: http://slicker.me/fractals/animate.htm</p>
+	</body>
+</html>
