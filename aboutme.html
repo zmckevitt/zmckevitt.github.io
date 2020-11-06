@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>About Me</title>
+		<style>
+			td {
+				padding: 10px;
+			}
+
+			.indentList {
+				padding-left:10%;
+			}
+
+			.splitscreen {
+				display:flex;
+				margin-left:10%;
+				margin-right:10%;
+				background-color:white;
+			}
+
+			.splitscreen .left {
+				padding-left:15%;
+				width: 45%;
+				flex:1;
+				padding-bottom: 20%;
+			}
+
+			.splitscreen .right {
+				flex:1;
+				padding-top:2%;
+				padding-left: 10%;
+			}
+
+			img {
+				display:block;
+				height: 75%;
+		    width: 70%;
+				border: 1px solid black;
+			  border-radius: 4px;
+			  padding: 5px;
+			}
+
+		</style>
+	</head>
+
+	<body style="background-color: #d3d3d3;">
+		<h1 style="text-align: center;">About Me</h1>
+		<table style="margin: 0px auto;">
+			<tr>
+				<td><a href="index.html" style="color: black;">Home</td>
+				<td><a href="aboutme.html" style="color: black;">About Me</td>
+				<td><a href="projects.html" style="color: black;">Projects</td>
+				<td><a href="tv.html" style="color: black;">Good TV</td>
+				<td><a href="music.html" style="color: black;">Good Music</td>
+			</tr>
+		</table>
+
+		<div class="splitscreen">
+		<div class="left">
+			<h2>Intro</h2>
+			<p>I am currently an undergraduate Computer Science at the University of Colorado Boulder. I expect to graduate with a BS in Computer Science as well as a minor in philosophy in Spring 2022. Presently, I am working as a research assistant in the Energy, Computer, and Energy (ECEE) department at CU, where my work consists of using probabilistic programming models (using the WebPPL language) to determine timing side-channels in software. Upon completing my undergrad, I would like to pursue a PhD in CS or Math.
+			<h2>Interests</h2>
+			<ul>
+				<li><h3>Computer Science</h3></li>
+					<div class="indentList">
+						<li>Computability and Complexity</li>
+						<li>Programming Languages</li>
+						<li>Quantum Computing</li>
+					</div>
+				<li><h3>Mathematics/Logic<h3></li>
+					<div class="indentList">
+						<li>Mathematical Logic</li>
+						<li>Philosophy of Mathematics</li>
+						<li>Proof Theory</pi>
+						<li>Recursion Theory</li>
+					</div>
+			</ul>
+			<h2>Links:</h2>
+			<a href="https://www.linkedin.com/in/zack-m-933965101/" target="_blank">Linkedin</a>
+		</div>
+		<div class="right">
+			<img src="me.PNG" alt="pic of me" id="me">
+		</div>
+	</div>
+	</body>
+</html>
