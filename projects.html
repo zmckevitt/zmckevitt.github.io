@@ -2,31 +2,10 @@
 <html>
 	<head>
 		<title>Projects</title>
+		<link rel="stylesheet" href="style.css">
 		<style>
 			td {
 				padding: 10px;
-			}
-
-			h3 {
-				padding-left: 30px;
-			}
-			
-			p {
-				padding-top: 0px;
-				padding-left: 30px;
-			}
-
-			hr {
-				width: 400px;
-				border-top: 1px solid black;
-				position: absolute;
-				left: 30px;
-			}
-
-			div {
-				width:400px;
-				overflow: hidden;
-				height:6em;
 			}
 		</style>
 	</head>
@@ -43,13 +22,16 @@
 			</tr>
 		</table>
 
-		<h3 style="padding-top: 35px;">Raspberry Pi Web Server (this website!)</h3>
-		<div>
-			<p>Sample text</p>
+		<div class ="splitscreen">
+			<div class="left">
+				<h2>zackmckevitt.com</h2>
+				<p>With a raspberry pi, an apache web server, a domain, and some port forwarding, I hosted this website on my home network. This project was for me to build exposure to basic networking and gain proficiency with the command line. With the convinving of my roommates, I was able to set up a DHCP reservation for my rasbperry pi so I wouldnt have to repoint the domain every week, and I opened port 80 for my server. After purchasing the zackmckevitt.com domian, I set up a basic DNS to point my A record domain at my pi.</p>
+				<h2>OneLine</h2>
+				<p>OneLine is a basic esoteric programming language I am currently developing that will throw an error if the code is not written entirely on one line. I am currently writing the parser in scala. Stay tuned!</p>
+			</div>
+			<div class="right">
+				<p> placeholder</p>
+			</div>
 		</div>
-		<hr> <!--Fix this -->
-
 	</body>
 </html>
-
-
