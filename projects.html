@@ -1,39 +1,104 @@
 <!DOCTYPE html>
-<html>
-	<head>
-		<title>Projects</title>
-		<link rel="stylesheet" href="style.css">
-		<style>
-			td {
-				padding: 10px;
-			}
-		</style>
-	</head>
+<html lang="en">
+<head>
+  <title>Projects</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
+  <style>
+  .fakeimg {
+    height: 200px;
+    background: #aaa;
+  }
 
-	<body style="background-color: #d3d3d3;">
-		<h1 style="text-align: center;">Projects</h1>
-		<table style="margin: 0px auto;">
-			<tr>
-				<td><a href="index.html" style="color: black;">Home</td>
-				<td><a href="aboutme.html" style="color: black;">About Me</td>
-				<td><a href="projects.html" style="color: black;">Projects</td>
-				<!-- <td><a href="tv.html" style="color: black;">Good TV</td> -->
-				<!-- <td><a href="music.html" style="color: black;">Good Music</td> -->
-			</tr>
-		</table>
+  .navbar-nav {
+    float:none;
+    margin:0 auto;
+    display: block;
+    text-align: center;
+}
 
-		<div class ="splitscreen">
-			<div class="left">
-				<h2>Understanding the Relationship Between Gas and Power Markets</h2>
-				<p>Wrote a company wide blog post for Yes Energy regarding the relationship between seasonal energy use and gas hub pricing. See the full writeup <a href = "https://www.yesenergy.cloud/energy-data/blog-post-title-two-x2n5r-754w3-5eymk-6y26l" target="_blank">here.</a></p>
-				<h2>zackmckevitt.com</h2>
-				<p>With a raspberry pi, an apache web server, a domain, and some port forwarding, I hosted this website on my home network. This project was for me to build exposure to basic networking and gain proficiency with the command line. With the convinving of my roommates, I was able to set up a DHCP reservation for my rasbperry pi so I wouldnt have to repoint the domain every week, and I opened port 80 for my server. After purchasing the zackmckevitt.com domian, I set up a basic DNS to point my A record domain at my pi. Note: this site is now fully hosted on GitHub pages.</p>
-				<h2>OneLine</h2>
-				<p>OneLine is a basic esoteric programming language I am currently developing that will throw an error if the code is not written entirely on one line. I am currently writing the parser in scala. Stay tuned!</p>
-			</div>
-			<div class="right">
-				<a href = "https://www.yesenergy.cloud/energy-data/blog-post-title-two-x2n5r-754w3-5eymk-6y26l" target="_blank"><img src="./yes_article.png", alt="yes energy article", width=90%, height=90%,  margin-right="10px"></a>
-			</div>
-		</div>
-	</body>
+.navbar-nav > li {
+    display: inline-block;
+    float:none;
+}
+
+  </style>
+</head>
+<body>
+
+<div class="pt-5 pb-1 bg-black text-white text-center">
+  <h1>Zack McKevitt</h1>
+  <p>Boulder, Colorado</p>
+</div>
+
+<nav class="navbar navbar-expand-sm bg-black navbar-dark">
+  <div class="container">
+    <ul class="navbar-nav">
+      <li class="nav-item">
+        <a class="nav-link" href="index.html">Home</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="research.html">Research</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link active" href="#">Projects</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container mt-5 pb-5">
+<h1 class="pb-3">Selected Class Projects</h1>
+  <div class="row">
+    <div class="col-sm-4">
+      <!-- <div class="fakeimg">Fake Image</div> -->
+      <hr class="d-sm-none">
+    </div>
+    <div class="col-sm-8">
+      <h2>Distributed File System - CSCI 5273</h2>
+      <h5>C</h5>
+      <p>Built a distributed file system for CSCI 5273 in C using sockets.</p> 
+
+    
+      <h2>HTTP Proxy Server - CSCI 5273</h2>
+      <h5>C</h5>
+      <p>Built a browser usable proxy server for websites using HTTP in C.</p>
+
+      <h2>Multithreaded DNS Resolver - CSCI 3573</h2>
+      <h5>C</h5>
+      <p>Wrote a DNS resolver capable of using multiple threads in a thread-safe manner.</p>
+
+      <h2>File I/O Driver LKM For Linux - CSCI 3573</h2>
+      <h5>C</h5>
+      <p>Wrote a basic driver for file I/O as a LKM to be loaded into the Linux Kernel.</p>
+    </div>
+  </div>
+
+  <h1>Personal Projects</h1>
+  <div class="row">
+        <div class="col-sm-4">
+          <!-- <div class="fakeimg">Fake Image</div> -->
+          <hr class="d-sm-none">
+        </div>
+        <div class="col-sm-8">
+                <h2>Tennis</h2>
+                <p>Simple ANSII terminal animation depicting two players hitting the ball back and forth.</p>
+
+                <h2>Raspberry Pi Server</h2>
+                <p>Various Raspberry Pi projects to learn basic system administration on Linux. Pi projects have included:</p>
+                <ul>
+                    <li>Bluetooth hub for playing music through a guitar amp</li>
+                    <li>Public facing HTTP server</li>
+                    <li>Game servers (Minecraft)</li>
+                </ul>
+
+                <h2>SpotiPy Guys</h2>
+        </div>
+      </div>
+
+</div>
+
+</body>
 </html>
