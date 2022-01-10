@@ -53,48 +53,51 @@
 <h1 class="pb-3">Selected Class Projects</h1>
   <div class="row">
     <div class="col-sm-4">
-      <!-- <div class="fakeimg">Fake Image</div> -->
+      <img class ="pt-2 img-fluid" src="buffs.png" alt="CU Buffs logo">
       <hr class="d-sm-none">
     </div>
     <div class="col-sm-8">
       <h2>Distributed File System - CSCI 5273</h2>
       <h5>C</h5>
-      <p>Built a distributed file system for CSCI 5273 in C using sockets.</p> 
+      <p>Built a distributed file system for CSCI 5273 in C using sockets for Linux based systems. Users were able to store and retrieve files on a de-centralized server (comprised of 4 servers each on a unique port) by uploading pieces of the file to each server. This program implements redundancy in the case of a single server failure, user authentication, and simple client side encryption that ensures the file pieces are encrypted both in transit to and from the server and when stored on the servers. The github for this project can be found <a href="https://github.com/zmckevitt/Distributed-File-System">here</a>.</p> 
 
     
       <h2>HTTP Proxy Server - CSCI 5273</h2>
       <h5>C</h5>
-      <p>Built a browser usable proxy server for websites using HTTP in C.</p>
+      <p>Built a browser-usable proxy server for websites using HTTP in C. This simple proxy was able to cache resources for a user defined length of time, cache DNS results, blacklist domain names or IP addresses, and pre-fetch resources for pages referenced via hyperlinks. The server also implemented multithreading to ensure that simultaneous connections would be handled.</p>
 
       <h2>Multithreaded DNS Resolver - CSCI 3573</h2>
       <h5>C</h5>
-      <p>Wrote a DNS resolver capable of using multiple threads in a thread-safe manner.</p>
+      <p>Wrote a DNS resolver capable of using multiple threads in a thread-safe manner. A fixed-length buffer was used to store domain names with multiple threads adding to and pulling from said buffer. Synchronization techniques such as mutex locks and condition variables were used to eliminate race conditions from the buffer, and the program's use of multiple threads ensured a faster run-time than that of a single threaded program.</p>
 
       <h2>File I/O Driver LKM For Linux - CSCI 3573</h2>
       <h5>C</h5>
-      <p>Wrote a basic driver for file I/O as a LKM to be loaded into the Linux Kernel.</p>
+      <p>Wrote a basic driver for file I/O as a LKM to be loaded into the Linux Kernel. This program achieved the same functionality as library functions such as fwrite() and fread() and directly manipulated inode pointers. This LKM was written in kernel space and we were responsible for successfully loading our LKM into the Linux kernal and using it.</p>
     </div>
   </div>
 
   <h1>Personal Projects</h1>
   <div class="row">
         <div class="col-sm-4">
+          <img class ="pt-2 img-fluid" src="group.JPG" alt="Hackathon Team">
+          <p>HackCU 007 Team</p>
           <!-- <div class="fakeimg">Fake Image</div> -->
           <hr class="d-sm-none">
         </div>
         <div class="col-sm-8">
                 <h2>Tennis</h2>
-                <p>Simple ANSII terminal animation depicting two players hitting the ball back and forth.</p>
+                <p>Simple ANSII terminal animation depicting two players hitting the ball back and forth. This small project consisted of a very small library for basic linear algebra constants such as vectors and their transformations. Programmed in C. <a href="https://github.com/zmckevitt/tennis">Github</a>.</p>
 
                 <h2>Raspberry Pi Server</h2>
-                <p>Various Raspberry Pi projects to learn basic system administration on Linux. Pi projects have included:</p>
+                <p>Various Raspberry Pi projects to learn basic system administration on Linux. In cases of public facing servers, basic "blue team" security measures were taken to ensure that the user running the servers have no privileges. In the future, I would like to continue using my Pi as a platform for experimentation, and my next project will be a basic blockchain. Pi projects so far have included:</p>
                 <ul>
                     <li>Bluetooth hub for playing music through a guitar amp</li>
                     <li>Public facing HTTP server</li>
-                    <li>Game servers (Minecraft)</li>
+                    <li>Public facing Game servers (Minecraft)</li>
                 </ul>
 
                 <h2>SpotiPy Guys</h2>
+                <p>Our contribution to the 24 hour HackCU 007 hackathon. In a team of 4, we built a web application to interface with the Spotify library SpotiPy so that users could get their <a href="https://en.wikipedia.org/wiki/Spotify_Wrapped">Spotify wrapped</a> at any time of the year. I was responsible for programming the back-end of the web server using Python while my teammates were tasked with writing the API calls and developing the front end. <a href="https://github.com/zmckevitt/hackcu007">Github.</a></p>
         </div>
       </div>
 
