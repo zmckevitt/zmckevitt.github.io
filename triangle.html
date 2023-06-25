@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Zack and Iain Big Weiner Club</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style>
+      canvas {
+        border: 1px solid black;
+        display: block;
+        margin: 0;
+        padding: 0;
+      }
+      html, body, div {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <canvas id="fractal-canvas"></canvas>
+    <script>
+      // Get the canvas element
+      const canvas = document.getElementById('fractal-canvas');
+      const ctx = canvas.getContext('2d');
+      
+      // Set the canvas size
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+      
+      // Set up the initial color and depth
+      let color = [255, 0, 0];
+      let depth = 0;
+      // let xpos = 10;
+      // let ypos = 10;
+      let xpos = [10, 510, 1010];
+      let ypos = [10, 443];
+      let brightness = 1;
+      let r = 0;
+      let g = 0;
+      let b = 0;
+      let r1 = 0;
+      let g1 = 0;
+      let b1 = 0;
+      let x = 0;
+      let y = 0;
+      let t_size = 500;
+     
+      let frame_scale = 0;
+ 
+      function animate() {
+        
+        const context = canvas.getContext('2d');
+        context.clearRect(0, 0, canvas.width, canvas.height);
+        if(frame_scale % 60 < 30) {
+          r += 8.5 * Math.round(Math.random());
+          g += 8.5 * Math.round(Math.random());
+          b += 8.5 * Math.round(Math.random());
+        }
+        else {
+          r -= 8.5;
+          if(r < 0) {
+            r = 0;
+          }
+          g -= 8.5;
+          if(g < 0) {
+            g = 0;
+          }
+          b -= 8.5;
+          if(b < 0) {
+            b = 0;
+          }
+          if(r == 0 && g == 0 && b == 0){
+            frame_skip = 0;
+          }
+        }
+        ctx.fillStyle = `rgb(${r/1}, ${g/1}, ${b/1})`;
+        ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+        ctx.lineWidth = 5;
+        
+       
+ 
+        if(frame_scale % 100 == 0 || depth-2 > Math.floor(Math.random()*7)) {
+          r1 = Math.floor(Math.random()*255);
+          g1 = Math.floor(Math.random()*255);
+          b1 = Math.floor(Math.random()*255);
+        
+          ctx.strokeStyle = `rgb(${r1/brightness}, ${g1/brightness}, ${b1/brightness})`;
+          brightness = Math.floor(Math.random()*5);
+        
+          t_size = Math.floor(Math.random()*canvas.width);
+          // Draw the current level of the fractal
+          if(Math.round(Math.random()*100) < 75) {
+            x = Math.floor(Math.random()*canvas.width);
+          }
+          else {
+            x = Math.floor(Math.random()*t_size/2 * -1);
+          }
+          if(Math.round(Math.random()*100) < 75) {
+            y = Math.floor(Math.random()*canvas.height);
+          }
+          else {
+            y = Math.floor(Math.random()*t_size/2*-1);
+          }
+          //depth = Math.floor(Math.random()*7);
+          depth = 0;
+        }
+     
+        drawSierpinskiTriangle(x, y, t_size, depth);
+        if(frame_scale % 5 == 0){
+                depth++;
+        }
+        frame_scale++;
+        
+        // Repeat the animation
+        requestAnimationFrame(animate);
+      }
+      
+      // Define the fractal function
+      function drawSierpinskiTriangle(x, y, size, depth) {
+        if (depth === 0) {
+          // Draw the triangle
+          ctx.beginPath();
+          ctx.moveTo(x, y);
+          ctx.lineTo(x + size, y);
+          ctx.lineTo(x + size / 2, y + size * Math.sqrt(3) / 2);
+          ctx.closePath();
+          ctx.stroke();
+        } else {
+          // Recursively draw three smaller triangles
+          const halfSize = size / 2;
+          drawSierpinskiTriangle(x, y, halfSize, depth - 1);
+          drawSierpinskiTriangle(x + halfSize, y, halfSize, depth - 1);
+          drawSierpinskiTriangle(x + halfSize / 2, y + halfSize * Math.sqrt(3) / 2, halfSize, depth - 1);
+        }
+      }
+      
+      // Start the animation
+      animate();
+    </script>
+  </body>
+</html>
+
