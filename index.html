@@ -1,120 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Zack McKevitt</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
-  <style>
-  .fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
+<html>
+	<head>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+		<title>Zack McKevitt - Home</title>
+	</head>
+    <body>
+        <div>
 
-  .navbar-nav {
-    float:none;
-    margin:0 auto;
-    display: block;
-    text-align: center;
-}
+            <!-- Navbar -->
+            <div class="navbar">
+                <ul>
+                    <li><a href="index.html" style="color: red;">Home</a></li>
+                    <li><a href="projects.html">Projects</a></li>
+                    <li><a href="papers.html">Papers</a></li>
+                    <li><a href="resume.html">Resume</a></li>
+                </ul>
+            </div>
 
-.navbar-nav > li {
-    display: inline-block;
-    float:none;
-}
+            <!-- Body -->
+            <div class="middle">
 
-  </style>
-</head>
-<body>
+                <div id="name">
+                <h1 style="line-height:50%;">Zack McKevitt</h1>
+                <h3 style="font-weight:lighter;line-height:50%;">Researcher at the University of Colorado Boulder | Former Intern at VMware</h3>
+                </div>
 
-<div class="pt-5 pb-1 bg-black text-white text-center">
-  <h1>Zack McKevitt</h1>
-  <p>Boulder, Colorado</p>
-</div>
+                <div class="grid-container">
+                    <div class="grid-child">
+                        <p>I am a recent MS Computer Science graduate from the University of Colorado Boulder where I worked under the supervision of Professor Tamara Lehman in the Computer Architecture research group. I am broadly interested in computer systems and applications of security and privacy.</p>
 
-<nav class="navbar navbar-expand-sm bg-black navbar-dark">
-  <div class="container">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="research.html">Research</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="projects.html">Projects</a>
-      </li>
-    </ul>
-  </div>
-</nav>
+                        <p>I am currently employed as a researcher across two appointments:</p>
+                        <ul>
+                            <li>Saftey Critical, Fault Tolerant Memory Systems - Faculty: Joseph Izraelevitz - In conjunction with: Sandia National Labs.</li>
+                            <li>Node-Replicated Operating System (NrOS) - Faculty: Eric Keller - In conjunction with: VMware Research.</li>
+                        </ul>
 
-<div class="container mt-5">
-  <div class="row">
-    <div class="col-sm-4">
-      <h2>About Me</h2>
-      <img src="me.jpg" class="img-fluid" alt="me">
-      <!-- <div class="fakeimg">Fake Image</div> -->
-      <!-- <h3 class="mt-4">Some Links</h3>
-      <ul class="nav nav-pills flex-column">
-        <li class="nav-item">
-          <a class="nav-link" href="#">Linkedin</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Github</a>
-        </li>
-      </ul> -->
-      <hr class="d-sm-none">
-    </div>
-    <div class="col-sm-8">
-      <h2>Overview</h2>
-      <!-- <div class="fakeimg">Fake Image</div> -->
-      <p>Research based Masters computer science student at the University of Colorado Boulder graduating Spring 2023. I am currently a researcher in the Computer Architecture group under Professor Tamara Lehman where my research is on finite state machine formalization for speculative execution attacks (Spectre). Over the summer, I spent my time as a systems software engineering intern at VMware making changes to the ESX hypervisor.</p>
+                        <p>During my MS, my research focus was on systematically identifying potential transient execution vulnerabilities in the gem5 simulator. The paper version of my thesis is currently under review at the International Conference on Parallel Architectures and Compilation Techniques (PACT) 2023.</p>
 
-      <p>My primary research interests lie broadly in computer systems and security and related applications in cryptography and privacy. In addition to hardware security, I am interested in various problems in security and applied cryptography as they relate to operating systems, networks, and distributed systems. In the near future, I plan on pursuing a PhD in computer systems security where I hope to expand my research skills beyond computer architecture to include other systems areas, and I aim to focus on privacy related issues. Through my positions as a grader and TA, I have also come to thoroughly enjoy teaching, and I am excited to pursue this passion more during my PhD studies.</p>
+                        <p>Before my MS, I also completed my BS in Computer Science at CU where my research was on using Recurrent Neural Networks for transient execution attack detection.</p>
+                    </div>
+                    <div class="grid-child">
+                        <img src="me2.jpg", class="rounded">
+                        <div style="margin-left:12%; margin-top:5%;">
+                            <a href="https://github.com/zmckevitt"><img src="gh.png" style="width:70px;padding-right:10px;"></a>
+                            <a href="https://linkedin.com/in/zack-mckevitt-933965101"><img src="li.png" style="width:70px;padding-right:10px;"></a>
+                            <a href="mailto:zachary.mckevitt@colorado.edu"><img src="mail.png" style="width:70px;padding-right:10px;"></a>
+                        </div>
+                    </div>
+                </div>
 
-      <p>In my free time, I like to ski, read, and travel!</p>
+                <h2> Selected Papers </h2>
+                <div class="papers">
+                    <h3>May 2023</h4> 
+                    <p style="font-weight: bold;">SpecCheck: A formal framework for detecting suspicious transient execution in the gem5 simulator. </p>
+                    <p>MS Thesis</p>
+                    <p>Zack McKevitt</p>
 
-      <h2 class="mt-4">Links</h2>
-      <ul class="nav nav-pills flex-column">
-        <li class="nav-item">
-          <a class="nav-link" href="https://www.linkedin.com/in/zack-mckevitt-933965101/">Linkedin</a>
-        </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/zmckevitt">Github</a>
-        </li>
-      </ul>
+                    <h3>May 2022</h4> 
+                    <p style="font-weight: bold;">Deep Learning Techniques for Automatic Transient Execution Attack Detection.</p>
+                    <p>BS Thesis</p>
+                    <p>Zack McKevitt</p>
 
-      <!-- <h2>Skills</h2> -->
+                    <h3>October 2021</h4> 
+                    <p style="font-weight: bold;">Automatic Transient Execution Attack Detection.</p>
+                    <p>Workshop on Hardware and Architectural Support for Security and Privacy (MICRO 2021)</p>
+                    <p>Zack McKevitt, Ashutosh Trivedi, Tamara Lehman</p>
+                </div>
 
-      <h2>Relevant Coursework</h2>
+            </div>
 
-      <h6>Computer Systems and Security</h6>
+        </div>
 
-      <ul>
-        <li>Distributed Systems (Graduate) - CSCI 5673</li>
-        <li>Network Systems (Graduate) - CSCI 5273</li>
-        <li>Computer Security and Ethical Hacking (Graduate) - CSCI 5413</li>
-        <li>Operating Systems - CSCI 3573</li>
-        <li>Introduction to Cybersecurity - CSCI 3403</li>
-        <li>Database Systems - CSCI 3287</li>
-        <li>Computer Systems - CSCI 2400</li>
-      </ul>
-
-      <h6>Theory, Programming Languages, and Logic</h6>
-      <ul>
-        <li>Design and Analysis of Algorithms (Graduate) - CSCI 5454</li>
-        <li>Compiler Construction (Graduate) - 5525</li>
-        <li>Numerical Computation - CSCI 3656</li>
-        <li>Quantum Computing - CSCI 3090</li>
-        <li>Theory of Computation - CSCI 3434</li>
-        <li>Principles of Programming Languages - CSCI 3155</li>
-        <li>Algorithms - CSCI 3104</li>
-        <li>Formal Logic 1 and 2 - PHIL 2440 & 4480</li>
-      </ul>
-    </div>
-  </div>
-</div>
-
-</body>
+        <!-- <div class="links">
+            <a href="https://github.com/zmckevitt"><img src="gh.png" style="width:40px;"></a>
+            <a href="https://linkedin.com/in/zack-mckevitt-933965101"><img src="li.png" style="width:40px;"></a>
+            <a href="mailto:zachary.mckevitt@colorado.edu"><img src="mail.png" style="width:40px;"></a>
+        </div> -->
+    </body>
 </html>

@@ -1,110 +1,49 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <title>Projects</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.2/dist/js/bootstrap.bundle.min.js"></script>
-  <style>
-  .fakeimg {
-    height: 200px;
-    background: #aaa;
-  }
+<html>
+	<head>
+        <link rel="stylesheet" type="text/css" href="style.css" />
+		<title>Zack McKevitt - Home</title>
+	</head>
+    <body>
+        <div>
 
-  .navbar-nav {
-    float:none;
-    margin:0 auto;
-    display: block;
-    text-align: center;
-}
-
-.navbar-nav > li {
-    display: inline-block;
-    float:none;
-}
-
-  </style>
-</head>
-<body>
-
-<div class="pt-5 pb-1 bg-black text-white text-center">
-  <h1>Zack McKevitt</h1>
-  <p>Boulder, Colorado</p>
-</div>
-
-<nav class="navbar navbar-expand-sm bg-black navbar-dark">
-  <div class="container">
-    <ul class="navbar-nav">
-      <li class="nav-item">
-        <a class="nav-link" href="index.html">Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="research.html">Research</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link active" href="#">Projects</a>
-      </li>
-    </ul>
-  </div>
-</nav>
-
-<div class="container mt-5 pb-5">
-<h1 class="pb-3">Selected Class Projects</h1>
-  <div class="row">
-    <div class="col-sm-4">
-      <img class ="pt-2 img-fluid" src="buffs.png" alt="CU Buffs logo">
-      <hr class="d-sm-none">
-    </div>
-    <div class="col-sm-8">
-      <h2>Distributed File System - CSCI 5273</h2>
-      <h5>C</h5>
-      <p>Built a distributed file system for CSCI 5273 in C using sockets for Linux based systems. Users were able to store and retrieve files on a de-centralized server (comprised of 4 servers each on a unique port) by uploading pieces of the file to each server. This program implements redundancy in the case of a single server failure, user authentication, and simple client side encryption that ensures the file pieces are encrypted both in transit to and from the server and when stored on the servers. The github for this project can be found <a href="https://github.com/zmckevitt/Distributed-File-System">here</a>.</p> 
-
-    
-      <h2>HTTP Proxy Server - CSCI 5273</h2>
-      <h5>C</h5>
-      <p>Built a browser-usable proxy server for websites using HTTP in C. This simple proxy was able to cache resources for a user defined length of time, cache DNS results, blacklist domain names or IP addresses, and pre-fetch resources for pages referenced via hyperlinks. The server also implemented multithreading to ensure that simultaneous connections would be handled.</p>
-
-      <h2>Multithreaded DNS Resolver - CSCI 3573</h2>
-      <h5>C</h5>
-      <p>Wrote a DNS resolver capable of using multiple threads in a thread-safe manner. A fixed-length buffer was used to store domain names with multiple threads adding to and pulling from said buffer. Synchronization techniques such as mutex locks and condition variables were used to eliminate race conditions from the buffer, and the program's use of multiple threads ensured a faster run-time than that of a single threaded program.</p>
-
-      <h2>File I/O Driver LKM For Linux - CSCI 3573</h2>
-      <h5>C</h5>
-      <p>Wrote a basic driver for file I/O as a LKM to be loaded into the Linux Kernel. This program achieved the same functionality as library functions such as fwrite() and fread() and directly manipulated inode pointers. This LKM was written in kernel space and we were responsible for successfully loading our LKM into the Linux kernal and using it.</p>
-    </div>
-  </div>
-
-  <h1>Personal Projects</h1>
-  <div class="row">
-        <div class="col-sm-4">
-          <img class ="pt-2 img-fluid" src="animation.gif" alt="Hackathon Team">
-          <p>Tennis animation</p>
-          <!-- <div class="fakeimg">Fake Image</div> -->
-          <hr class="d-sm-none">
-        </div>
-        <div class="col-sm-8">
-                <h2>HTTP Server in Rust</h2>
-                <p>Teaching myself Rust by building a simple HTTP server. Source code available on <a href="https://github.com/zmckevitt/http_rust">github</a>.</p>
-
-                <h2>Tennis</h2>
-                <p>Simple ANSII terminal animation depicting two players hitting the ball back and forth. This small project consisted of a very small library for basic linear algebra constants such as vectors and their transformations. Programmed in C. <a href="https://github.com/zmckevitt/tennis">Github</a>.</p>
-
-                <h2>Raspberry Pi Server</h2>
-                <p>Various Raspberry Pi projects to learn basic system administration on Linux. In cases of public facing servers, basic "blue team" security measures were taken to ensure that the user running the servers have no privileges. In the future, I would like to continue using my Pi as a platform for experimentation, and my next project will be a basic blockchain. Pi projects so far have included:</p>
+            <!-- Navbar -->
+            <div class="navbar">
                 <ul>
-                    <li>Bluetooth hub for playing music through a guitar amp</li>
-                    <li>Public facing HTTP server</li>
-                    <li>Public facing Game servers (Minecraft)</li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="projects.html" style="color: red;">Projects</a></li>
+                    <li><a href="papers.html">Papers</a></li>
+                    <li><a href="resume.html">Resume</a></li>
                 </ul>
+            </div>
 
-                <h2>SpotiPy Guys</h2>
-                <p>Our contribution to the 24 hour HackCU 007 hackathon. In a team of 4, we built a web application to interface with the Spotify library SpotiPy so that users could get their <a href="https://en.wikipedia.org/wiki/Spotify_Wrapped">Spotify wrapped</a> at any time of the year. I was responsible for programming the back-end of the web server using Python while my teammates were tasked with writing the API calls and developing the front end. <a href="https://github.com/zmckevitt/hackcu007">Github.</a></p>
+            <!-- Body -->
+            <div class="middle">
+                <div class="grid-container">
+                    <div class="grid-child">
+                        <h2>SpecCheck</h2>
+                        <p>A finite state machine formalization common to all speculation based transient execution vulnerabilities. This formalization tracks data dependencies during misspeculated code regions and identifies unsafe regions in software that may leak data via Spectre. This work was developed as a proof of concept in the gem5 simulator as a debugging module for developing secure architectures. This work has led to a submission to PACT 2023 currently under review, and will be a significant portion of my Masters thesis.</p>
+                    </div>
+                    <div class="grid-child">
+                        <img src="sc.png", class="rounded" style="height:100%;width:100%;">
+                    </div>
+                </div>
+
+                <br>
+
+                <div class="grid-container">
+                    <div class="grid-child">
+                        <h2>SpecRNN</h2>
+                        <p>Leveraging Recurrent Neural Networks (RNNs) with LSTM layers to learn processor pipeline behaviour of programs vulnerable to Spectre attacks. Our platform attempts to follow program flow at the microarchitectural level to observe hardware state changes on a simulated x86 architecture by using the gem5 simulator. By providing the model with a sufficient number of gem5 traces from Spectre vulnerable programs and programs guaranteed to be safe from said attacks, the model is able to differentiate between a safe and vulnerable program by observing patterns in pipeline state.</p>
+
+                        <p>This research has been presented at the University of Colorado Undergraduate Research Symposium, the HASP workshop at MICRO '21, NCUR '22, and was defended as my bachelors thesis in May 2022.</p>
+                    </div>
+                    <div class="grid-child">
+                        <img src="spectre.png", class="rounded">
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-
-</div>
-
-</body>
+    
+    </body>
 </html>

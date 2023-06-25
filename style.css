@@ -1,0 +1,84 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #fafafa;
+    font-family: 'Segoe UI';
+}
+
+.navbar {
+    /* position: fixed; */
+    width: 100%;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #919191;
+    /* display:block; */
+}
+
+.middle {
+    /* display:block; */
+    margin-top: 2%;
+    margin-left: 25%;
+    width: 70%;
+}
+
+.navbar ul {
+    list-style-type: none;
+    /* margin-left: 10%; */
+    padding: 0;
+    overflow: hidden;
+}
+
+.navbar li {
+    float: left;
+    font-weight: bold;
+}
+
+.navbar li a {
+    text-align: center;
+    color: black;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: large;
+    /* font-family: Helvetica; */
+}
+
+/* Change the link color to #111 (black) on hover */
+.navbar li a:hover {
+    color: #919191;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 20px;
+}
+
+p {
+    word-break: normal;
+}
+
+img.rounded {
+    object-fit: cover;
+    border-radius: 10%;
+    width: 60%;
+    height: auto;
+}
+
+.links {
+    position: fixed;
+    left: 50%;
+    bottom: 20px;
+    transform: translate(-50%, -50%);
+    margin: 0 auto;
+}
+
+#name {
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-bottom-color: #919191;
+    width: 50%;
+}
+
+.papers p{
+    line-height:50%;
+}
