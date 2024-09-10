@@ -1,74 +1,53 @@
 <!DOCTYPE html>
 <html>
-	<head>
+    <meta name="viewport" content="device-width">
+    <head>
         <link rel="stylesheet" type="text/css" href="style.css" />
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
 		<title>Zack McKevitt - Home</title>
 	</head>
     <body>
         <div>
-
-            <!-- Navbar -->
-            <div class="navbar">
-                <ul>
-                    <li><a href="index.html" style="color: red;">Home</a></li>
-                    <li><a href="projects.html">Projects</a></li>
-                    <li><a href="papers.html">Papers</a></li>
-                    <li><a href="resume.html">Resume</a></li>
-                </ul>
-            </div>
-
             <!-- Body -->
-            <div class="middle">
-
-                <div id="name">
-                <h1 style="line-height:50%;">Zack McKevitt</h1>
-                <h3 style="font-weight:lighter;line-height:normal;">Researcher at the University of Colorado Boulder | Former Intern at VMware</h3>
+            <div id="middle">
+                <div> 
+                <a href="/" style="color: black;padding-right:1em;">Home</a>
+                <!--
+                <a href="/" style="color: black;padding-right:1em;">Blog</a>
+                <a href="/" style="color: black;padding-right:1em;">Travel</a>
+                -->
+                </div>
+                <div class="grid-container">
+                    <div class="grid-child" style="height:60%">
+                        <h1 >Zack McKevitt</h1>
+                        <h3 style="font-weight:lighter;">Researcher at the University of Colorado Boulder</h3>
+                        <a href="https://github.com/zmckevitt"><img src="gh.png" style="width:2em;padding-right:10px;"></a>
+                        <a href="https://linkedin.com/in/zack-mckevitt-933965101"><img src="li.png" style="width:2em;padding-right:10px;"></a>
+                        <a href="https://scholar.google.com/citations?user=mhhhOyAAAAAJ&hl=en&oi=ao"><i class="ai ai-google-scholar" style="font-size: 2.5em; color:black; padding-right:10px"></i></a>
+                        <a href="mailto:zachary.mckevitt@colorado.edu"><img src="mail.png" style="width:2em;padding-right:10px;"></a>
+                    </div>
+                    <div class="grid-child" style="text-align: right;">
+                        <img src="me2.jpg" id="mepic" style="width: 70%; margin-top:5%" class="rounded">
+                    </div>
+                </div>
+                <div id="line">
                 </div>
 
-                <div class="grid-container">
-                    <div class="grid-child">
-                        <p>I am a recent MS Computer Science graduate from the University of Colorado Boulder where I worked under the supervision of Professor Tamara Lehman in the Computer Architecture research group. I am broadly interested in computer systems and applications of security and privacy.</p>
+                <p>I am a recent MS Computer Science graduate from the University of Colorado Boulder where I worked under the supervision of Professor Tamara Lehman in the Computer Architecture research group. I am broadly interested in computer systems and applications of security and privacy.</p>
 
-                        <p>I am currently employed as a researcher across two appointments:</p>
-                        <ul>
-                            <li><b>SEUP: Robust Detection and Correction of Radiation Errors for Commodity Microprocessors</b><br>Faculty: Joseph Izraelevitz<br>In conjunction with: Sandia National Labs.</li>
-                            <li><b><a href="https://github.com/vmware-labs/node-replicated-kernel">Node Replicated Kernel</a></b><br>Faculty: Eric Keller<br>In conjunction with: VMware Research.</li>
-                        </ul>
+                <p>I am currently employed as a researcher across two appointments:</p>
+                <ul>
+                    <li><b>Single Event Upset Protector (SEUP)</b><br>Faculty: Joseph Izraelevitz<br>In conjunction with: Sandia National Labs.</li>
+                    <li><b><a href="https://github.com/vmware-labs/node-replicated-kernel" style="color:dimgray">Node Replicated Kernel</a></b><br>Faculty: Eric Keller</li>
+                </ul>
 
-                        <p>During my MS, my research focus was on systematically identifying potential transient execution vulnerabilities in the gem5 simulator. The paper version of my thesis was presented at the International Conference on Parallel Architectures and Compilation Techniques (PACT) 2023.</p>
+                <p>During my MS, my research focus was on systematically identifying potential transient execution vulnerabilities in the gem5 simulator. The paper version of my thesis was presented at the International Conference on Parallel Architectures and Compilation Techniques (PACT) 2023.</p>
 
                         <p>Before my MS, I also completed my BS in Computer Science at CU where my research was on using Recurrent Neural Networks for transient execution attack detection.</p>
-                    </div>
-                    <div class="grid-child">
-                        <img src="me2.jpg", class="rounded">
-                        <div style="margin-left:12%; margin-top:5%;">
-                            <a href="https://github.com/zmckevitt"><img src="gh.png" style="width:70px;padding-right:10px;"></a>
-                            <a href="https://linkedin.com/in/zack-mckevitt-933965101"><img src="li.png" style="width:70px;padding-right:10px;"></a>
-                            <a href="mailto:zachary.mckevitt@colorado.edu"><img src="mail.png" style="width:70px;padding-right:10px;"></a>
-                        </div>
-                    </div>
-                </div>
-
-                <h2> Selected Papers </h2>
-                <div class="papers">
-                    <h3>October 2023</h4> 
-                    <p><span style="font-weight: bold;">SpecCheck: A Tool for Systematic Identification of Vulnerable Transient Execution in gem5.</span><br>
-                       PACT 2023<br>
-                       Zack McKevitt, Ashutosh Trivedi, Tamara Lehman</p>
-
-                    <h3>May 2022</h4> 
-                    <p><span style="font-weight: bold;">Deep Learning Techniques for Automatic Transient Execution Attack Detection.</span><br>
-                       BS Thesis<br>
-                       Zack McKevitt</p>
-
-                    <h3>October 2021</h4> 
-                    <p><span style="font-weight: bold;">Automatic Transient Execution Attack Detection.</span><br>
-                       Workshop on Hardware and Architectural Support for Security and Privacy (MICRO 2021)<br>
-                       Zack McKevitt, Ashutosh Trivedi, Tamara Lehman</p>
-                </div>
-
+                <h2> Papers </h2>
+                <p>Thomas, S., Workneh, K., Ishimwe, A. T., <b>McKevitt, Z.</b>, Curlin, P., Bahar, R. I., ... & Lehman, T. (2024). Baobab Merkle Tree for Efficient Secure Memory. IEEE Computer Architecture Letters.</p>
+                <p><b>McKevitt, Z.</b>, Trivedi, A., & Lehman, T. S. (2023, October). SpecCheck: A Tool for Systematic Identification of Vulnerable Transient Execution in gem5. In 2023 32nd International Conference on Parallel Architectures and Compilation Techniques (PACT) (pp. 265-278). IEEE.</p> 
             </div>
-
         </div>
 
         <!-- <div class="links">
@@ -76,5 +55,20 @@
             <a href="https://linkedin.com/in/zack-mckevitt-933965101"><img src="li.png" style="width:40px;"></a>
             <a href="mailto:zachary.mckevitt@colorado.edu"><img src="mail.png" style="width:40px;"></a>
         </div> -->
+    <script>
+        var hasTouchScreen = false;
+        
+        if ("maxTouchPoints" in navigator) {
+            hasTouchScreen = navigator.maxTouchPoints > 0;
+        } 
+        
+        if (hasTouchScreen) {
+            // Device is likely mobile, so do stuff for mobile devices here.
+            document.getElementById("mepic").style.width = "60%";
+            // document.getElementById("mepic").style.marginTop = "10%";
+            document.getElementById("middle").style.width= "80%";
+            document.getElementById("middle").style.marginLeft= "10%";
+        }
+</script>
     </body>
 </html>

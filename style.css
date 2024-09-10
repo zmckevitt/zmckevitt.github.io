@@ -2,49 +2,14 @@ body {
     margin: 0;
     padding: 0;
     background-color: #fafafa;
-    font-family: 'Segoe UI';
+    font-family: 'Helvetica';
 }
 
-.navbar {
-    /* position: fixed; */
-    width: 100%;
-    border-bottom-style: solid;
-    border-bottom-width: 1px;
-    border-bottom-color: #919191;
-    /* display:block; */
-}
-
-.middle {
-    /* display:block; */
+#middle {
+    display:block; 
+    margin-left:30%;
     margin-top: 2%;
-    margin-left: 25%;
-    width: 70%;
-}
-
-.navbar ul {
-    list-style-type: none;
-    /* margin-left: 10%; */
-    padding: 0;
-    overflow: hidden;
-}
-
-.navbar li {
-    float: left;
-    font-weight: bold;
-}
-
-.navbar li a {
-    text-align: center;
-    color: black;
-    padding: 14px 16px;
-    text-decoration: none;
-    font-size: large;
-    /* font-family: Helvetica; */
-}
-
-/* Change the link color to #111 (black) on hover */
-.navbar li a:hover {
-    color: #919191;
+    width: 40%;
 }
 
 .grid-container {
@@ -60,8 +25,6 @@ p {
 img.rounded {
     object-fit: cover;
     border-radius: 10%;
-    width: 60%;
-    height: auto;
 }
 
 .links {
@@ -72,13 +35,11 @@ img.rounded {
     margin: 0 auto;
 }
 
-#name {
+#line{
+    margin: 4pt;
     border-bottom-style: solid;
     border-bottom-width: 1px;
     border-bottom-color: #919191;
-    width: 50%;
+    width: 100%;
 }
 
-.papers p{
-    line-height:normal;
-}
